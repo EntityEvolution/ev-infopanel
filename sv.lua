@@ -1,4 +1,4 @@
-local WEBHOOK = "https://discord.com/api/webhooks/921636158847467531/fScNgp7tigQN7bDvY1SCVqIMTXU5zt9wUO_I-3U33tOck3VsvziMPQSPnGEUUE2gEBbE"
+local WEBHOOK = "YOUR_WEBHOOK_HERE"
 
 local esx = GetResourceState('es_extended') == 'started'
 local qb = GetResourceState('qb-core') == 'started'
