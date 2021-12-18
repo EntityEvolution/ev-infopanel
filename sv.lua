@@ -1,3 +1,5 @@
+local WEBHOOK = "https://discord.com/api/webhooks/921636158847467531/fScNgp7tigQN7bDvY1SCVqIMTXU5zt9wUO_I-3U33tOck3VsvziMPQSPnGEUUE2gEBbE"
+
 local esx = GetResourceState('es_extended') == 'started'
 local qb = GetResourceState('qb-core') == 'started'
 local playersData = {}
@@ -78,6 +80,17 @@ local sendInfo = function(playerId)
     end
 end
 
+local function sendDiscord(message)
+    local embeds = {
+        {
+            ["title"] = 'User Panel Report',
+            ["color"] = 123456,
+            ["description"]  = message
+        }
+    }
+    return PerformHttpRequest(WEBHOOK, function(err, text, headers) end, 'POST', json.encode({ username = username, embeds = embeds, avatar_url = avatar_url}), { ['Content-Type'] = 'application/json' })
+end
+
 AddEventHandler('playerDropped', function()
 	local playerId <const> = source
     local license = getLicense(playerId)
@@ -124,6 +137,12 @@ RegisterNetEvent('ev:playerSet', function()
 
         local result = Citizen.Await(p)
         playersData[result.license] = result
+    end
+end)
+
+RegisterNetEvent('ev:sendRequest', function(data)
+    if data and type(data) == "table" then
+        sendDiscord("```Title: " .. data.title .. "\nDescription: " .. data.desc .. "\n```")
     end
 end)
 

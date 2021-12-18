@@ -19,6 +19,15 @@ RegisterNUICallback('close', function(_, cb)
     end
 end)
 
+RegisterNUICallback('sendReport', function(data, cb)
+    if isOpen then
+        if data then
+            TriggerServerEvent('ev:sendRequest', data)
+        end
+    end
+end)
+
+
 CreateThread(function()
 	while true do
 		if NetworkIsPlayerActive(PlayerId()) then
