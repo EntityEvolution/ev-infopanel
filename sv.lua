@@ -39,7 +39,7 @@ local function getData(playerId)
     if qb then
         data.phone_number = QBCore.Functions.GetPlayer(playerId).PlayerData.charinfo.phone
     else
-        --data.phone_number = exports.oxmysql:singleSync('SELECT phone_number FROM users WHERE identifier = ?', {currentIdentifier})
+        data.phone_number = exports.oxmysql:singleSync('SELECT phone_number FROM users WHERE identifier = ?', {ESX.GetPlayerFromId(playerId).identifier}).phone_number
     end
     local license = getLicense(playerId)
     if license then
