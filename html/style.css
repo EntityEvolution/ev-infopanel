@@ -1,0 +1,204 @@
+@font-face {
+    font-family: 'Rubik';
+    src: url('./Rubik-Regular.ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Light';
+    src: url('./Rubik-Light.ttf');
+    font-display: swap;
+}
+
+body {
+    overflow: hidden;
+}
+
+.wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    background-color: rgb(192, 192, 192);
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 60%;
+    border-radius: 0.5vh;
+
+    background-color: #211515;
+}
+
+.top {
+    top: 2.5%;
+    right: 2.5%;
+    position: absolute;
+    color: #a3a3a3;
+    font-size: 2.5vh;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.header img {
+    width: 14vh;
+    border-radius: 50%;
+}
+
+.change {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 70%;
+}
+
+.change span {
+    font-size: 1.7vh;
+    color: #cfcfcf;
+    font-family: 'Light';
+    text-transform: uppercase;
+}
+
+.info-cont {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 70%;
+    width: 100%;
+}
+
+.info-cont div {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+}
+
+.info-cont div span {
+    color: #a0a0a0;
+    text-transform: capitalize;
+}
+
+.info-cont div span:first-of-type {
+    font-size: 1.7vh;
+    color: #eeeeee;
+}
+
+.info-cont div span:last-of-type {
+    font-size: 1.6vh;
+}
+
+.btn-container {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+    height: 35%;
+    background: #ad4a67;
+    border-radius: 0.6vh;
+    cursor: pointer;
+}
+
+.btn-container div:first-of-type {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d75e83;
+    border-top-left-radius: 0.6vh;
+    border-bottom-left-radius: 0.6vh;
+    width: 25%;
+    height: 100%;
+}
+
+.btn-container div:last-of-type {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 75%;
+    height: 100%;
+}
+
+.btn-container div i {
+    color: white;
+    font-size: 3.2vh;
+    font-weight: 600;
+}
+
+.img-inp {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+    height: 20%;
+    border-radius: 0.6vh;
+
+    background-color: #351d1d;
+}
+
+.img-inp span {
+    font-family: 'Light';
+    font-size: 2.2vh;
+    color: #c3c3c3;
+}
+
+.img-inp input {
+    width: 70%;
+    height: 17.5%;
+    border-radius: 0.4vh;
+    border: none;
+    background-color: rgba(48, 48, 48, 0.8);
+    color: honeydew;
+    outline: none;
+    text-align: center;
+    font-size: 1.38vh;
+    font-family: 'Light';
+}
+
+::placeholder {
+  color: rgb(167, 167, 167);
+}
+
+.img-inp div {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    height: 17.5%;
+    width: 100%;
+}
+
+.img-inp div button {
+    position: relative;
+    text-align: center;
+    width: 42.5%;
+    height: 100%;
+    font-family: 'Light';
+    font-size: 1.7vh;
+    border: none;
+    border-radius: 0.4vh;
+}
