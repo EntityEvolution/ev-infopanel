@@ -11,7 +11,7 @@ version '1.0.0'
 client_script 'cl.lua'
 
 server_script {
-    '@es_extended/imports.lua',
+    '@es_extended/imports.lua', -- change to the qbcore import.
     'sv.lua'
 }
 
